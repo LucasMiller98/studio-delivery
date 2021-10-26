@@ -5,11 +5,18 @@ export const Context = createContext({} as ContextTypes)
 
 export const ContextProvider = ({ children }: ProviderProps) => {
 
+  
   const [isButtonHiddenState, setIsButtonHiddenState] = useState(false)
   const [isConfirmButtonHidden, setIsConfirmButtonHidden] = useState(false)
 
-  const isContinueButton = false
-  
+  const [name, setName] = useState('')
+  const [cpf, setCPF] = useState('')
+  const [dateBorn, setDateBorn] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
   const toggleHiddenPassword = (isButtonHidden: boolean) => {
     setIsButtonHiddenState(!isButtonHidden)
   }
@@ -19,12 +26,19 @@ export const ContextProvider = ({ children }: ProviderProps) => {
   }
   
   return (
+      
     <Context.Provider value={{
       isButtonHiddenState,
       toggleHiddenPassword,
       toggleHiddenConfirmPassword,
       isConfirmButtonHidden,
-      isContinueButton,
+      name,
+      dateBorn,
+      cpf,
+      confirmPassword,
+      email,
+      password,
+      phone,
     }}>
       { children }
     </Context.Provider>

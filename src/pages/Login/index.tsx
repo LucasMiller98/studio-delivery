@@ -34,19 +34,27 @@ export function Login() {
             separatorText='ou'
             isHeaderLogin
           />
-          
+
           <S.Form onSubmit={handleSubmit}>
             <Input
+              htmlFor='email'
+              label='E-mail'
+              autoComplete='off'
               value={email} 
               onChange={event => setEmail(event.target.value)}
-              placeholder='E-mail'
+              placeholder=' '
               type='text'
+              isLargerField
             />
+
             <S.ContainerPasswordField>
               <Input
+                htmlFor='password'
+                label='Senha'
+                autoComplete='off'
                 value={password} 
                 onChange={event => setPassword(event.target.value)}
-                placeholder='Senha'
+                placeholder=' '
                 maxLength={8}
                 type={isButtonHiddenState ? 'text': 'password'}
                 isPasswordField
@@ -59,7 +67,7 @@ export function Login() {
                 isEyesButton
               >
                 { isButtonHiddenState ? (
-                  <BsEyeFill 
+                  <BsEyeFill
                     size={20} 
                     color='#000' 
                   />

@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 export const Page = styled.div `
-  width: 100vw;
   height: 100vh;
   background: #f1f1f1;
 `
 
 export const Container = styled.div `
-  height: 80vh;
+  height: 85vh;
 
   display: flex;
   align-items: center;
@@ -21,6 +20,7 @@ export const Header = styled.header `
   font-style: normal;
   justify-content: center;
   flex-direction: column;
+  /* margin-top: 1.2rem; */
 `
 
 export const Title = styled.h1 `

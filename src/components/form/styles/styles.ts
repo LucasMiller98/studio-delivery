@@ -1,22 +1,19 @@
 import styled from 'styled-components'
 
-export const Page = styled.div `
-  height: 100vh;
-  background: #f1f1f1;
-`
-
-export const Container = styled.div `
-  height: 80vh;
-
+export const ContainerPasswordField = styled.div `
+  background: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  border-radius: 12px;
+
+  padding-right: 1rem;
 `
 
 export const Form = styled.form `
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   width: 80%;
   gap: 1rem;
 
@@ -26,6 +23,7 @@ export const Form = styled.form `
 export const AnotherDataContainer = styled.div `
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 1rem;
 `
 
@@ -39,8 +37,9 @@ export const ContainerShowPassword = styled.div `
   background: #fff;
   display: flex;
   align-items: center;
-  border-radius: 12px;
   width: 100%;
+  border-radius: 12px;
+
   padding-right: 1rem;
 `
 
@@ -48,7 +47,8 @@ export const ContainerShowConfirmPassword = styled.div `
   background: #fff;
   display: flex;
   align-items: center;
-  border-radius: 12px;
   width: 100%;
+  border-radius: 12px;
+
   padding-right: 1rem;
 `

@@ -34,7 +34,6 @@ export const Button = styled.button `
     justify-content: flex-end;
     border: 0;
     background: #fff;
-    width: 8%;
     height: 8%;
   }
 `
