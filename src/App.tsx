@@ -1,5 +1,5 @@
 import { GlobalStyle } from './styles/global'
-import { Routes } from './routes/routes'
+import { AllRoutes } from './routes/routes'
 import { ContextProvider } from './context/Context'
 
 export function App() {
@@ -7,7 +7,7 @@ export function App() {
     <>
       <ContextProvider>
         <GlobalStyle />
-        <Routes />
+        <AllRoutes />
       </ContextProvider>
     </>
   );

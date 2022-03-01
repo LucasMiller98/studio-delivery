@@ -37,7 +37,7 @@ export const TitleH5 = styled.h5 `
   color: #F5F5F5;
 
   position: absolute;
-  top: 343px;
+  top: 54%;
   left: 171px;
 
   margin-top: 1rem;
