@@ -2,7 +2,7 @@ import { Button } from "../Button";
 import { Input } from "../Input";
 import * as S from './styles/styles'
 import { FormEvent, useState } from "react";
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { BsEyeFill } from 'react-icons/bs'
 import { RiEyeOffFill } from 'react-icons/ri'
 import { useContextApi } from '../../context/hooks/useContextApi';
@@ -26,14 +26,14 @@ export function Form({isFormLogin}: FormProps) {
   const [confirmPassword, setConfirmPassword] = useState('')
   // const [isFormLogin, setIsFormLogin] = useState(false)
   
-  const history = useHistory()
+  const navigate = useNavigate()
   
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault()
   }
 
   const handleBack = () => {
-    history.push('/login')
+    navigate('/login')
   }
   
   return(

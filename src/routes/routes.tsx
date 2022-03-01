@@ -8,10 +8,10 @@ export function AllRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={Loading} />
-        <Route path='/login' element={Login} />
-        <Route path='/cadastre-se' element={Register} />
-        <Route path='/cadastre-se/account' element={RegisterSettingAccount} />
+        <Route path='/' element={<Loading />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/cadastre-se' element={<Register />} />
+        <Route path='/cadastre-se/account' element={<RegisterSettingAccount />} />
       </Routes>
     </Router>
   )

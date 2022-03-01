@@ -1,5 +1,5 @@
 import { FormEvent, useState, useRef } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Input } from '../../components/Input'
 import * as S from './styles/styles'
 import { Button } from '../../components/Button'
@@ -24,12 +24,12 @@ export function Register() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault()
     
-    history.push('/cadastre-se/account')
+    navigate('/cadastre-se/account')
 
     handleValidateCPF(cpf)
   }
@@ -140,7 +140,7 @@ export function Register() {
   }
   
   const handleBack = () => {
-    history.push('/login')
+    navigate('/login')
   }
   
   return (
