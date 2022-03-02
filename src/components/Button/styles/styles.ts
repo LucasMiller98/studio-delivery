@@ -16,6 +16,7 @@ export const Button = styled.button `
   border: 1px solid transparent;
   font-size: 12px;
   line-height: 18px;
+  width: 100%;
 
   &.continue {
     margin-top: 1.7rem;

@@ -6,6 +6,8 @@ export const Header = styled.header `
   font-style: normal;
   justify-content: center;
   flex-direction: column;
+  width: 40vh;
+  height: 57%;
 `
 
 export const Title = styled.h1 `

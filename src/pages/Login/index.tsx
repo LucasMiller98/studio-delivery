@@ -5,6 +5,7 @@ import { BsEyeFill, RiEyeOffFill } from 'react-icons/all'
 import { Input } from '../../components/Input'
 import { Header } from '../../components/Header'
 import { useContextApi } from '../../context/hooks/useContextApi'
+import { Form } from '../../components/Form/index'
 
 export function Login() {
   const { 
@@ -35,7 +36,9 @@ export function Login() {
             isHeaderLogin
           />
 
-          <S.Form onSubmit={handleSubmit}>
+          <Form isFormLogin />
+
+          {/* <S.Form onSubmit={handleSubmit}>
             <Input
               htmlFor='email'
               label='E-mail'
@@ -92,8 +95,8 @@ export function Login() {
               }>
               Continuar
             </Button>
-          </S.Form>
-        </S.Container>
+          </S.Form>*/}
+        </S.Container> 
       </S.Page>
     </>
   )

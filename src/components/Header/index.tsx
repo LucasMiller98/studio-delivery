@@ -21,7 +21,7 @@ export function Header({ ...props }: HeaderProps) {
             color='#615B5B'
             background='#fff'
           >
-            <FcGoogle size={19.7} />
+            <FcGoogle size={21.7} />
             { props.buttonChildrenGoogle }
           </Button>
 

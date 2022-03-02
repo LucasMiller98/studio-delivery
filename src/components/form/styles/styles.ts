@@ -31,6 +31,11 @@ export const ContainerButtons = styled.div `
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
+
+  button {
+    width: 100%;
+  }
 `
 
 export const ContainerShowPassword = styled.div `

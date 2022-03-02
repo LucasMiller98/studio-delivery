@@ -43,6 +43,7 @@ export const Input = styled.input `
   font-weight: normal;
   color: #000;
   border: 0;
+  width: 100%;
 
   &::placeholder {
     color: #000;

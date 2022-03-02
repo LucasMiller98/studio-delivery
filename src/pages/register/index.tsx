@@ -6,6 +6,7 @@ import { Button } from '../../components/Button'
 import { BsEyeFill, RiEyeOffFill } from 'react-icons/all'
 import { Header } from '../../components/Header'
 import { useContextApi } from '../../context/hooks/useContextApi'
+import { Form } from '../../components/Form/index'
 
 export function Register() {
 
@@ -16,132 +17,132 @@ export function Register() {
     toggleHiddenPassword,
   } = useContextApi()
   
-  const [cpf, setCPF] = useState('')
+  // const [cpf, setCPF] = useState('')
   
-  const [name, setName] = useState('')
-  const [dateBorn, setDateBorn] = useState('')
-  const [phone, setPhone] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const navigate = useNavigate()
+  // const [name, setName] = useState('')
+  // const [dateBorn, setDateBorn] = useState('')
+  // const [phone, setPhone] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [password, setPassword] = useState('')
+  // const [confirmPassword, setConfirmPassword] = useState('')
+  // const navigate = useNavigate()
 
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault()
+  // const handleSubmit = (event: FormEvent) => {
+  //   event.preventDefault()
     
-    navigate('/cadastre-se/account')
+  //   navigate('/cadastre-se/account')
 
-    handleValidateCPF(cpf)
-  }
+  //   handleValidateCPF(cpf)
+  // }
 
-  const handleMaskInptCpf = (cpf: any) => {
+  // const handleMaskInptCpf = (cpf: any) => {
 
-    cpf = document.getElementsByTagName('input')[2]
+  //   cpf = document.getElementsByTagName('input')[2]
 
-    if(cpf.value.length === 3 || cpf.value.length === 7) {
-      cpf.value += '.'
-    }
+  //   if(cpf.value.length === 3 || cpf.value.length === 7) {
+  //     cpf.value += '.'
+  //   }
 
-    if(cpf.value.length === 11) {
-      cpf.value += '-'
-    }
-  }
+  //   if(cpf.value.length === 11) {
+  //     cpf.value += '-'
+  //   }
+  // }
 
-  const handleValidateCPF = (cpf: string) => {
+  // const handleValidateCPF = (cpf: string) => {
     
-    if(typeof cpf !== 'string') return false
+  //   if(typeof cpf !== 'string') return false
     
-    cpf = cpf.replace(/[\s.-]*/igm, '')
+  //   cpf = cpf.replace(/[\s.-]*/igm, '')
 
-    if(cpf.length != 11 || 
-      cpf == '00000000000' || 
-      cpf == '11111111111' || 
-      cpf == '22222222222' || 
-      cpf == '33333333333' || 
-      cpf == '44444444444' || 
-      cpf == '55555555555' || 
-      cpf == '66666666666' || 
-      cpf == '77777777777' || 
-      cpf == '88888888888' || 
-      cpf == '99999999999') {
+  //   if(cpf.length != 11 || 
+  //     cpf == '00000000000' || 
+  //     cpf == '11111111111' || 
+  //     cpf == '22222222222' || 
+  //     cpf == '33333333333' || 
+  //     cpf == '44444444444' || 
+  //     cpf == '55555555555' || 
+  //     cpf == '66666666666' || 
+  //     cpf == '77777777777' || 
+  //     cpf == '88888888888' || 
+  //     cpf == '99999999999') {
 
-        return false
-    }
+  //       return false
+  //   }
 
-    let soma = 0
-    let resto = 0
+  //   let soma = 0
+  //   let resto = 0
 
-    for(let i = 1; i <= 9; i++) {
-      soma += parseInt(cpf.substring(i - 1, i)) * (11 - i)
-    }
+  //   for(let i = 1; i <= 9; i++) {
+  //     soma += parseInt(cpf.substring(i - 1, i)) * (11 - i)
+  //   }
 
-    resto = (soma * 10) % 11
+  //   resto = (soma * 10) % 11
 
-    if((resto == 10) || (resto == 11)) {
-      resto = 0
-    }
+  //   if((resto == 10) || (resto == 11)) {
+  //     resto = 0
+  //   }
 
-    if(resto != parseInt(cpf.substring(9, 10))) {
-      return false
-    }
+  //   if(resto != parseInt(cpf.substring(9, 10))) {
+  //     return false
+  //   }
 
-    soma = 0
+  //   soma = 0
 
-    for(let i = 1; i <= 10; i++) {
-      soma += parseInt(cpf.substring(i - 1, i)) * (12 - i)
-    }
+  //   for(let i = 1; i <= 10; i++) {
+  //     soma += parseInt(cpf.substring(i - 1, i)) * (12 - i)
+  //   }
 
-    resto = (soma * 10) % 11
-    console.log(resto)
+  //   resto = (soma * 10) % 11
+  //   console.log(resto)
 
-    if((resto === 10) || (resto === 11)) {
-      resto = 0
-    }
+  //   if((resto === 10) || (resto === 11)) {
+  //     resto = 0
+  //   }
 
-    if(resto != parseInt(cpf.substring(10, 11))) {
-      return false
-    }
+  //   if(resto != parseInt(cpf.substring(10, 11))) {
+  //     return false
+  //   }
 
-    return true
-  }
+  //   return true
+  // }
 
-  const handleMaskDateBorn = (dateBorn: any) => {
-    dateBorn = document.getElementsByTagName('input')[1]
+  // const handleMaskDateBorn = (dateBorn: any) => {
+  //   dateBorn = document.getElementsByTagName('input')[1]
 
-    if(dateBorn.value.length === 2 || dateBorn.value.length === 5) {
-      dateBorn.value += '/'
-    }
-  }
+  //   if(dateBorn.value.length === 2 || dateBorn.value.length === 5) {
+  //     dateBorn.value += '/'
+  //   }
+  // }
 
-  const handleMaskCellPhone = (phone: any) => {
+  // const handleMaskCellPhone = (phone: any) => {
     
-    phone = document.getElementsByTagName('input')[3]
-    console.log(phone)
+  //   phone = document.getElementsByTagName('input')[3]
+  //   console.log(phone)
 
-    // if(phone.value[0]) {
-    //   phone.value += phone.value.replace(phone.value[0], '')
-    // }
+  //   // if(phone.value[0]) {
+  //   //   phone.value += phone.value.replace(phone.value[0], '')
+  //   // }
     
-    if(phone.value.length === 1) {
-      phone.value += '('
-    }
+  //   if(phone.value.length === 1) {
+  //     phone.value += '('
+  //   }
 
-    if(phone.value.length === 4) {
-      phone.value += ')'
-    }
+  //   if(phone.value.length === 4) {
+  //     phone.value += ')'
+  //   }
 
-    if(phone.value.length === 6) {
-      phone.value += ' '
-    }
+  //   if(phone.value.length === 6) {
+  //     phone.value += ' '
+  //   }
 
-    if(phone.value.length === 11) {
-      phone.value += '-'
-    }
-  }
+  //   if(phone.value.length === 11) {
+  //     phone.value += '-'
+  //   }
+  // }
   
-  const handleBack = () => {
-    navigate('/login')
-  }
+  // const handleBack = () => {
+  //   navigate('/login')
+  // }
   
   return (
     <>
@@ -155,7 +156,9 @@ export function Register() {
             linkTo='/login'
           />
 
-          <S.Form onSubmit={handleSubmit}>
+          <Form />
+
+          {/* <S.Form onSubmit={handleSubmit}>
             <Input
               autoComplete='off' 
               onChange={(event) => setName(event.target.value)}
@@ -320,7 +323,7 @@ export function Register() {
                 Continuar
               </Button>
             </S.ContainerButtons>
-          </S.Form>
+          </S.Form> */}
         </S.Container>
       </S.Page>
     </>

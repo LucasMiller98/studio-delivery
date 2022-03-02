@@ -6,7 +6,7 @@ export const Page = styled.div `
 `
 
 export const Container = styled.div `
-  height: 85vh;
+  height: 74vh;
 
   display: flex;
   align-items: center;
@@ -20,7 +20,6 @@ export const Header = styled.header `
   font-style: normal;
   justify-content: center;
   flex-direction: column;
-  /* margin-top: 1.2rem; */
 `
 
 export const Title = styled.h1 `
