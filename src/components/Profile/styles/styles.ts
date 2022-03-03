@@ -12,8 +12,6 @@ export const Container = styled.div `
 export const Span = styled.span `
   position: absolute;
   width: 83px;
-  /* left: 125px; */
-  /* top: 49.06%; */
   bottom: -116.88%;
 
   font-family: 'Poppins', sans-serif;
